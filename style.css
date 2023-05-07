@@ -1,4 +1,6 @@
 html, body {
+    display: flex;
+    vertical-align: top;
     background: url(textur.webp) center center fixed;
     font-size: 27px;
     background-size: cover;
@@ -7,8 +9,8 @@ html, body {
     padding: 0;
     width: 100%;
     color: rgb(56, 35, 3);
-    display: block;
-    vertical-align: text-top;
+    justify-content: center;
+ 
 
 
 
