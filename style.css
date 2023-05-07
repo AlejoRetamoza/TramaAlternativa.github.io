@@ -1,11 +1,13 @@
 body {
-    background: url(textur.jpg) center center fixed;
+    background: url(textur.webp) center center fixed;
     font-size: 27px;
     background-size: cover;
     min-height: 100vh;
     margin: 0;
     padding: 0;
     width: 100%;
+    display: inline-block;
+    color: rgb(56, 35, 3);
    
 }
 
@@ -55,9 +57,7 @@ button:hover {
 }
 
 #final {
-    display: flex;
-    height: 100vh;
-    align-items: center;
+
     flex-direction: column;
 }
 
@@ -66,9 +66,6 @@ button:hover {
 }
 
 #final2 {
-    display: flex;
-    height: 100vh;
-    align-items: center;
     flex-direction: column;
 }
 
