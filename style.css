@@ -1,9 +1,8 @@
 html, body {
     display: flex;
     vertical-align: top;
-    background: url(textur.webp) center center fixed;
+    background: red;
     font-size: 27px;
-    background-size: cover;
     height: 100vh;
     margin: 0;
     padding: 0;
