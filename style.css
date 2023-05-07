@@ -8,6 +8,7 @@ body {
     width: 100%;
     display: inline-block;
     color: rgb(56, 35, 3);
+    background-attachment: fixed;
    
 }
 
