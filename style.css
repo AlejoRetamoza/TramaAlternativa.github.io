@@ -1,7 +1,6 @@
-html, body {
+ body {
     display: flex;
     vertical-align: top;
-    background: red;
     font-size: 27px;
     height: 100vh;
     margin: 0;
@@ -9,8 +8,9 @@ html, body {
     width: 100%;
     color: rgb(56, 35, 3);
     justify-content: center;
- 
-
+    background: url(textur.webp) center center fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
 
 
    
@@ -66,7 +66,7 @@ button:hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 360px;
+
 }
 
 
@@ -79,7 +79,7 @@ button:hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 360px;
+
 }
 
 .transicion {
@@ -87,3 +87,21 @@ button:hover {
     transition: opacity 1s ease-in-out;
   }
 
+
+@media screen and (max-width:799px) {
+    body {
+        background: url(fondo.jpg)center center fixed;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+    }
+}
+
+
+@media screen and (min-width:800px) and  {
+
+    section {
+        align-items: center;
+    }
+    
+}
