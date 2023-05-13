@@ -28,11 +28,6 @@ section {
 }
 
 
-.opciones  {
-    height: 400px;
-    display: flex;
-    flex-direction: column;     
-}
 
 .second {
     display: flex;
@@ -56,7 +51,7 @@ button:hover {
 }
 
 .dead {
-    background: url(mancha2.png) center center;
+    background: url(mancha3.png) center center;
     background-repeat: no-repeat;  
 }
 
