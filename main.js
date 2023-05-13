@@ -15,16 +15,18 @@ function scrollToTop() {
   }
 
 btn1.addEventListener('click',  () => {
-    contenedor.classList.add('transicion');
     opciones.classList.add('transicion');
+    final.classList.add('transicion');
+   
 
     setTimeout(() => {
+      contenedor.style.height = "350px";
       contenedor.classList.add('dead');
       opciones.innerHTML = 'Decides empezar a caminar hacia el desconocido con intenciones de satisfacer tu necesidad de información. Entonces, la persona misteriosa avanza abruptamente contra ti y te apuñala salvajemente con una navaja...';
 
       contenedor.style.opacity = 1;
       opciones.style.opacity = 1;
-    }, 1000);
+  
 
     let mensaje = document.createElement('h4');
     let texto = document.createTextNode('HAS MUERTO');
@@ -35,6 +37,7 @@ btn1.addEventListener('click',  () => {
     let txt = document.createTextNode('Volver a empezar');
     btn.appendChild(txt);
     final.appendChild(btn);
+    final.style.opacity = 1;
 
     btn.addEventListener('click', () => {
         scrollToTop();
@@ -44,6 +47,7 @@ btn1.addEventListener('click',  () => {
             }
           });
     });
+  }, 1000);
 });
 
 let final2 = document.getElementById('final2');
@@ -51,6 +55,8 @@ let final2 = document.getElementById('final2');
 btn2.addEventListener('click',  () => {
     opciones.classList.add('transicion');
     final.classList.add('transicion');
+    final.style.height = "600px";
+    final.style.justifyContent = "end";
     
     setTimeout(() => {
     opciones.innerHTML = 'Decides hablarle a la figura misteriosa desde donde estas:  <br> - Ey!!, donde estamos?, qué es este lugar?.  <br> Desconocido-Eres parte de ellos verdad?, solo quieres experimentar conmigo... (saca un cuchillo y comienza a correr hacia donde estás) <br> Tú-espera!!, no tengo idea de lo que estás habalndo!.<br> Desconocido-(Se detiene)- Entonces no  vas asesinarme como a los demás?(llorando) <br> Tú- No tengo intenciones de dañarte, solo necesito saber en donde estamos, no recuerdo nada. <br> Desconocido-Estamos en el infierno. <br> En ese momento una criatura de aproximadamente 5 metros de alto con aspecto humanoide aparece detrás del Desconocido y lo aprieta fuertemente con sus manos hasta matarlo.';
@@ -68,13 +74,16 @@ btn2.addEventListener('click',  () => {
     btn0.appendChild(txt0);
     final.appendChild(btn0);
     
-    
     btn.addEventListener('click',  () => {
       final2.classList.add('transicion');
       final.style.opacity = 0;
       final.style.transition = 0.2;
+      opciones.style.opacity = 0;
+      opciones.style.transition = 0.2;
       
       setTimeout( () =>{ 
+        contenedor.style.height = "150px";
+        opciones.remove();
         final.remove();
         final2.classList.add ('dead');
         final2.innerHTML = 'Lamentablemente el mosntruo te supera en volocidad por mucho y te alcanza para luego aplaztarte de la misma forma que al desconocido';
@@ -105,8 +114,12 @@ btn2.addEventListener('click',  () => {
       final2.classList.add('transicion');
       final.style.opacity = 0;
       final.style.transition = 0.2;
+      opciones.style.opacity = 0;
+      opciones.style.transition = 0.2;
       
       setTimeout(() => { 
+        contenedor.style.height = "150px";
+        opciones.remove();
         final.remove();
         final2.classList.add ('dead');
         final2.innerHTML = 'Lamentablemente el mosntruo te supera en fuerza por mucho y tus debiles golpes no lo afectan en nada. Tu destino resulta ser el mismo que el del desconocido';
@@ -148,7 +161,7 @@ btn3.addEventListener('click',  () => {
   final.classList.add('transicion');
   
   setTimeout(() => {
-
+  contenedor.style.height = "600px"
   opciones.innerHTML = 'Decides correr costeando el mar, lo mas lejos posible del extraño. Entonces divisas una lancha llegando a la playa a unos metros de donde estabas. <br> Arriba de la lancha puedes observar varias personas que al verte comienzan a indicarte euforicamente que subas de manera urgente con ellos a la lancha, mientras se acercan lo mas rapido posible hacia ti hasta estar lo bastante cerca como para que puedas subir si corres algunos pocos metros mas';
 
   let btn = document.createElement('button');
@@ -165,6 +178,10 @@ btn3.addEventListener('click',  () => {
     final2.classList.add('transicion');
     final.style.opacity = 0;
     final.style.transition = 0.2;
+    final2.style.width = "350px";
+    final2.style.marginTop= "20px";
+
+
     
     setTimeout(() => { 
       final.remove();
@@ -188,6 +205,7 @@ btn3.addEventListener('click',  () => {
     final2.classList.add('transicion');
     final.style.opacity = 0;
     final.style.transition = 0.2;
+    final2.style.marginTop= "20px";
     
     setTimeout(() => { 
       final.remove();
