@@ -10,10 +10,7 @@ body {
     justify-content: center;
     background: url(textur.webp) center center fixed;
     background-size: cover;
-    background-repeat: no-repeat;
-
-
-   
+    background-repeat: no-repeat;  
 }
 
 section {
@@ -27,16 +24,14 @@ section {
 .flex-box {
     text-align: center;
     height: 740px;
-    width: 360px;
-  
+    width: 360px; 
 }
 
 
 .opciones  {
     height: 400px;
     display: flex;
-    flex-direction: column;   
-   
+    flex-direction: column;     
 }
 
 .second {
@@ -58,13 +53,11 @@ button {
 
 button:hover {
     opacity: 100%;
-
 }
 
 .dead {
     background: url(mancha2.png) center center;
-    background-repeat: no-repeat;
-    
+    background-repeat: no-repeat;  
 }
 
 #final {
@@ -75,7 +68,6 @@ button:hover {
     height: 400px;
 
 }
-
 
 #final h4 {
     font-size: 35px;
@@ -96,12 +88,9 @@ button:hover {
   }
  
 
-
-
 @media screen and (min-width:800px) and  {
 
     section {
         align-items: center;
-    }
-    
+    }   
 }

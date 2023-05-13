@@ -18,7 +18,6 @@ btn1.addEventListener('click',  () => {
     opciones.classList.add('transicion');
     final.classList.add('transicion');
    
-
     setTimeout(() => {
       contenedor.style.height = "350px";
       contenedor.classList.add('dead');
@@ -62,8 +61,6 @@ btn2.addEventListener('click',  () => {
     opciones.innerHTML = 'Decides hablarle a la figura misteriosa desde donde estas:  <br> - Ey!!, donde estamos?, qué es este lugar?.  <br> Desconocido-Eres parte de ellos verdad?, solo quieres experimentar conmigo... (saca un cuchillo y comienza a correr hacia donde estás) <br> Tú-espera!!, no tengo idea de lo que estás habalndo!.<br> Desconocido-(Se detiene)- Entonces no  vas asesinarme como a los demás?(llorando) <br> Tú- No tengo intenciones de dañarte, solo necesito saber en donde estamos, no recuerdo nada. <br> Desconocido-Estamos en el infierno. <br> En ese momento una criatura de aproximadamente 5 metros de alto con aspecto humanoide aparece detrás del Desconocido y lo aprieta fuertemente con sus manos hasta matarlo.';
     opciones.style.opacity = 1;
 
-    
-  
     let btn = document.createElement('button');
     let txt = document.createTextNode('Corres costeando el mar');
     btn.appendChild(txt);
@@ -145,13 +142,9 @@ btn2.addEventListener('click',  () => {
           });
           final2.style.opacity = 1 ;
         }, 1000);
-
     });
     opciones.style.opacity = 1;
     final.style.opacity = 1;
-
-
-
   }, 1000);
   
 });
@@ -181,14 +174,12 @@ btn3.addEventListener('click',  () => {
     final2.style.width = "350px";
     final2.style.marginTop= "20px";
 
-
-    
     setTimeout(() => { 
       final.remove();
       final2.innerHTML = 'Te acercas y subes rapidamente a la lancha y esta arranca a toda velocidad lejos de la isla, mientras se alejan logras ver una especie de humano giante observandolos y rugiendo euforicamente con rabia. <br> No puedes creer que lo que estes viendo sea real y preguntas a las personas que te salvaron, qué es esa criatura <br> Uno de ellos responde- Es en lo que te habrias convertido si no subias con nosotros a la lancha, la gente de  esta isla es una secta que experimenta con seres humanos y la mayoria termina transformado en alguna criatura extraña y salvaje. Hasta el momento no habiamos podido encontrar donde realizaban sus actividades, hasta hoy. Eres la primera persona que logramos salvar... <br>  FIN';
 
       let imgFinal = document.createElement('img')
-      imgFinal.src = "victoria.png"
+      imgFinal.src = "victoria1.png"
       final2.appendChild(imgFinal)
     
       let mensaje = document.createElement('h4');
