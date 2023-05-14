@@ -19,7 +19,12 @@ btn1.addEventListener('click',  () => {
     final.classList.add('transicion');
    
     setTimeout(() => {
-      contenedor.style.height = "350px";
+      if(window.innerWidth < 900 ){      
+        contenedor.style.height = "350px";
+    } else {
+      contenedor.style.height = "900px";
+    }
+      
       contenedor.classList.add('dead');
       opciones.innerHTML = 'Decides empezar a caminar hacia el desconocido con intenciones de satisfacer tu necesidad de información. Entonces, la persona misteriosa avanza abruptamente contra ti y te apuñala salvajemente con una navaja...';
 
@@ -39,12 +44,16 @@ btn1.addEventListener('click',  () => {
     final.style.opacity = 1;
 
     btn.addEventListener('click', () => {
-        scrollToTop();
+      if(window.innerWidth < 900) {   
+      scrollToTop();
         window.addEventListener('scroll', () => {
             if (window.pageYOffset === 0) {
               location.reload();
             }
           });
+        } else {
+          location.reload();
+        }
     });
   }, 1000);
 });
@@ -73,12 +82,19 @@ btn2.addEventListener('click',  () => {
       final2.classList.add('transicion');
       final.style.opacity = 0;
       final.style.transition = 0.2;
+      if(window.innerWidth < 900) {
       opciones.style.opacity = 0;
       opciones.style.transition = 0.2;
+    };
       
       setTimeout( () =>{ 
+        if(window.innerWidth < 900){
         opciones.remove();
         final.remove();
+      }else {
+        final.remove();
+      }
+
         final2.classList.add ('dead');
         final2.innerHTML = 'Lamentablemente el mosntruo te supera en volocidad por mucho y te alcanza para luego aplaztarte de la misma forma que al desconocido';
         
@@ -93,27 +109,38 @@ btn2.addEventListener('click',  () => {
         final2.appendChild(btn3);
     
         btn3.addEventListener('click', () => {
+          if(window.innerWidth < 900) {   
             scrollToTop();
-            window.addEventListener('scroll', () => {
-                if (window.pageYOffset === 0) {
-                  location.reload();
-                }
-              });
+              window.addEventListener('scroll', () => {
+                  if (window.pageYOffset === 0) {
+                    location.reload();
+                  }
+                });
+              } else {
+                location.reload();
+              }
         });
         final2.style.opacity = 1 ;
-      }, 1000)
+      }, 1000);
     });
 
     btn0.addEventListener('click',  () => {
       final2.classList.add('transicion');
       final.style.opacity = 0;
       final.style.transition = 0.2;
+      if(window.innerWidth < 900) {
       opciones.style.opacity = 0;
       opciones.style.transition = 0.2;
+    };
       
       setTimeout(() => { 
-        opciones.remove();
-        final.remove();
+        if(window.innerWidth < 900){
+          opciones.remove();
+          final.remove ();
+        }else {
+          final.remove();
+        }
+  
         final2.classList.add ('dead');
         final2.innerHTML = 'Lamentablemente el mosntruo te supera en fuerza por mucho y tus debiles golpes no lo afectan en nada. Tu destino resulta ser el mismo que el del desconocido';
         
@@ -128,13 +155,16 @@ btn2.addEventListener('click',  () => {
         final2.appendChild(btn4);
     
         btn4.addEventListener('click', () => {
+          if(window.innerWidth < 900) {   
             scrollToTop();
-            window.addEventListener('scroll', () => {
-                if (window.pageYOffset === 0) {
-                  location.reload();
-                }
-
-            });
+              window.addEventListener('scroll', () => {
+                  if (window.pageYOffset === 0) {
+                    location.reload();
+                  }
+                });
+              } else {
+                location.reload();
+              }
           });
           final2.style.opacity = 1 ;
         }, 1000);
@@ -175,12 +205,26 @@ btn3.addEventListener('click',  () => {
 
       let imgFinal = document.createElement('img')
       imgFinal.src = "victoria1.png"
-      final2.appendChild(imgFinal)
-    
       let mensaje = document.createElement('h4');
       let texto = document.createTextNode('HAS ESCAPADO CON VIDA');
       mensaje.appendChild(texto);
+
+
+      if(window.innerWidth < 900) {
+      final2.appendChild(imgFinal);
       final2.appendChild(mensaje);
+    } else {
+      imgFinal.classList.add('transicion')
+      mensaje.classList.add('transicion')
+      final2.style.height = "960px";  
+      contenedor.appendChild(imgFinal);
+      contenedor.appendChild(mensaje);
+      setTimeout (() =>{
+        imgFinal.style.opacity = 1;
+        mensaje.style.opacity = 1;
+      }, 200)
+
+    }
 
       final2.style.opacity = 1 ;
     }, 1000);
@@ -195,6 +239,9 @@ btn3.addEventListener('click',  () => {
     setTimeout(() => { 
       final.remove();
       final2.classList.add ('dead');
+      if (window.innerWidth > 900){
+        final2.style.width = "500px";
+      };
       final2.innerHTML = 'Al dar la vuelta nuevamente para elegir otro rumbo al cual dirigirte ves una criatura de aproximadamente 4 m de alto acercandose a pasos agigantados hacia donde estás, tratas de correr hacia alguna parte pero la bestia es demasiado veloz. <br> Antes de que puedas tomar una decisión certera te atrapa y te aplasta hasta la muerte ';
     
       let mensaje = document.createElement('h4');
@@ -208,12 +255,16 @@ btn3.addEventListener('click',  () => {
       final2.appendChild(btn4);
 
       btn4.addEventListener('click', () => {
+        if(window.innerWidth < 900) {   
           scrollToTop();
-          window.addEventListener('scroll', () => {
-              if (window.pageYOffset === 0) {
-                location.reload();
-              }
-            });
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset === 0) {
+                  location.reload();
+                }
+              });
+            } else {
+              location.reload();
+            }
       });
         final2.style.opacity = 1 ;
     }, 1000);
