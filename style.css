@@ -1,8 +1,11 @@
+html {
+    background-color: rgb(160, 131, 86);
+}
 body {
     display: flex;
     vertical-align: top;
     font-size: 27px;
-    height: 100vh;
+    height: auto;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -11,11 +14,12 @@ body {
     background: url(textur.webp) center center fixed;
     background-size: cover;
     background-repeat: no-repeat;  
+     z-index: 999;
 }
 
 section {
     display: flex;
-    height: 100vh;
+    height: auto;
     justify-content: center;
     align-items: start;
     flex-wrap: wrap;
